@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%load static%}
+{% block title %}about{% endblock title %}
+{% block additional_styles %} <link rel="stylesheet" href="{% static "contact.css" %}"> {% endblock additional_styles %} 
+{% block body %}
+<header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <section>
+    <form action="/contact" method="post">
+        {% csrf_token %}
+      <label for="username">UserName:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  {% endblock body %}

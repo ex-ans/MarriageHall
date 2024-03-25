@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{%load static%}
+{% block title %}booking{% endblock title %}
+{% block additional_styles %} <link rel="stylesheet" href="{% static "booking.css" %}"> {% endblock additional_styles %} 
+{% block body %}
+<h1>Marriage Hall Booking Form</h1>
+    <form action="/booking" method="post" id="bookingForm">
+        {% csrf_token %}
+        <label for="serial_number">Serial Number:</label>
+        <input type="Number" id="serial_number" name="serial_number"  value="{{serial_number}}" readonly><br><br>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="CNIC">CNIC:</label>
+        <input type="text" id="cnic" name="cnic" required><br><br>
+
+        <label for="events">Events:</label>
+        <select name="events" id="dropdownMenu">
+            <option value="barat">barat</option>
+            <option value="mehnndi">Mehndi</option>
+            <option value="walima">Walima</option>
+            <option value="other">other</option>
+        </select>
+
+        <label for="amount">Amount for event:</label>
+        <input type="text" id="amount" name="amount" required><br><br>
+
+        <label for="date">Date of Event:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+
+        <input type="submit" value="Submit Booking">
+    </form>
+    {% endblock body %}

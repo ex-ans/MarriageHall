@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+{%load static%} 
+{% block title %}Home{% endblock title%}
+{% block additional_styles %} <link rel="stylesheet" href="{% static "index.css" %}"> {% endblock additional_styles %}
+{% block body %}
+<div class="parent">
+  <h1>Marriage Hall</h1>
+  <div class="btn">
+    <a class="btn1" href="booking">Book Now</a>
+    <a class="btn1" href="#">Learn More</a>
+  </div>
+</div>
+
+{% endblock body %}

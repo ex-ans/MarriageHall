@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Slip</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+
+      .slip-container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .slip-header {
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .slip-details {
+        padding: 20px;
+      }
+
+      .slip-details label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+      }
+
+      .slip-details p {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .slip-footer {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      p {
+        font-weight: bold;
+      }
+      .signature {
+        text-align: right;
+        margin-top: 20px;
+        padding-right: 20px; /* Add padding for spacing from the right edge */
+      }
+
+      .office {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    
+    .office a {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .office a > span {
+        font-weight: bold; /* Make only the text inside span elements bold */
+    }
+    
+
+    h1{
+        text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="slip-container">
+      <div class="slip-header">
+        <h2>Booking Slip</h2>
+      </div>
+      <div class="office">
+        <a>Serial Number: <span>{{data.serial_number}}</span></a>
+        <a>First Name: <span>{{data.fname}}</span></a>
+        <a>Last Name: <span>{{data.lname}}</span></a>
+        <a>CNIC: <span>{{data.cnic}}</span></a>
+        <a>Event: <span>{{data.events}}</span></a>
+        <a>Amount: <span>{{data.amount}}</span></a>
+        <a>Date: <span>{{data.date}}</span></a>
+        <div class="signature">
+            <h3>Signature ___________</h3>
+          </div>
+      </div>
+
+     
+
+      
+
+      
+      <div><h1>For Office</h1></div>
+      <div class="office">
+        <a>Serial Number: <span>{{data.serial_number}}</span></a>
+        <a>First Name: <span>{{data.fname}}</span></a>
+        <a>Last Name: <span>{{data.lname}}</span></a>
+        <a>CNIC: <span>{{data.cnic}}</span></a>
+        <a>Event: <span>{{data.events}}</span></a>
+        <a>Amount: <span>{{data.amount}}</span></a>
+        <a>Date: <span>{{data.date}}</span></a>
+        <div class="signature">
+            <h3>Signature ___________</h3>
+          </div>
+      </div>
+     
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{%load static%}
+{% block title %}booked-bookings{% endblock title %}
+{% block additional_styles %} <link rel="stylesheet" href="{% static "bookedbooking.css" %}"> {% endblock additional_styles %}
+{% block body %}
+  <h1>Search Result :</h1>
+  <form action="{%url 'search'%}" method="get">
+    <input type="text" name="search" placeholder="Search by serial number...">
+    <input type="submit" value="Search">
+</form>
+   {%if alldata%}
+   <ul>
+   {% for item in alldata%}
+        <li> <a>Serial Number:</a> {{item.serial_number}} <a>First Name:</a> {{item.fname}} ||  <a>Last Name:</a> {{ item.lname }} ||  <a>CNIC:</a> {{ item.cnic }} 
+        <a type="btn" href="/delete/{{item.serial_number}}">Delete</a>
+        <a type="btn" href="/edit/{{item.serial_number}}">Edit</a>
+        <a type="btn" href="/slip/{{item.serial_number}}">View</a>
+        </li>
+    {%endfor%}
+    </ul>
+   {%else%}
+   <p>NO Data Found</p>
+   {%endif%}
+{% endblock body %}

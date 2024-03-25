@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}|Marriage Hall</title>
+    {% block additional_styles %}{% endblock additional_styles %}
+    {% block add_js %}{% endblock add_js %}
+     <style>
+        .vabar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #fff; /* Example background color for the profile icon */
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        
+        .profile a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+    </style> 
+</head>
+<body class="boddyy">
+<header class="vabar">
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/contact">contact</a>
+        <a href="/booking">Booking</a>
+        <a href="/booked-bookings">Booked</a>
+    </div>
+    <div class="profile">
+        <span class="profile-icon"></span>
+        <span>Logged in as: {{ request.user }}</span>
+        <a href="/logoutUser">Logout</a>
+    </div>
+</header>
+{% block body %}{% endblock body %}
+<!-- Your page content goes here -->
+
+</body>
+</html>
